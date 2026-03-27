@@ -1,6 +1,9 @@
 #! /usr/bin/env bash
 
-# version: 4.0.0 2026-03-08
+# version: 4.0.1 2026-03-08
+# changes
+# */* in set by path
+# dnot download a image and become a wallaper pywal dont do it
 
 WALLPAPER_FOLDERS=( ""
 		    ""
@@ -10,7 +13,7 @@ case $1 in
 
     # show paths and show if have or not setting
 
-    ~/* | $HOME/*)
+    */* | ~/* | *$HOME/*)
     wal -i "$1" -q
     ;;
 
